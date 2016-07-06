@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, MoveDirectionType){
+typedef NS_ENUM(NSUInteger,MoveDirectionType){
     MoveDirectionLeft,
-    MoveDirectionRight,
-    MoveDirectionNone
+    MoveDirectionRight
 };
 
 @interface MSMoveView : UIView
@@ -28,5 +27,5 @@ typedef NS_ENUM(NSUInteger, MoveDirectionType){
  *  执行动画
  */
 - (void)startAnimation;
-- (void)stopAnimation;
+//- (void)stopAnimation;
 @end

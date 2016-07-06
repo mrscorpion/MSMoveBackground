@@ -15,6 +15,8 @@
 		0DD1C1511D2D387A006FA7E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C14F1D2D387A006FA7E5 /* LaunchScreen.storyboard */; };
 		0DD1C15C1D2D387A006FA7E5 /* MSBackgroundMoveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C15B1D2D387A006FA7E5 /* MSBackgroundMoveTests.m */; };
 		0DD1C1681D2D38AC006FA7E5 /* MSMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C1671D2D38AC006FA7E5 /* MSMoveView.m */; };
+		0DD1C1AD1D2D4746006FA7E5 /* Slice.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C1AC1D2D4746006FA7E5 /* Slice.png */; };
+		0DD1C1AF1D2D481E006FA7E5 /* immersion_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C1AE1D2D481E006FA7E5 /* immersion_mode.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		0DD1C15D1D2D387A006FA7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DD1C1661D2D38AC006FA7E5 /* MSMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMoveView.h; sourceTree = "<group>"; };
 		0DD1C1671D2D38AC006FA7E5 /* MSMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMoveView.m; sourceTree = "<group>"; };
+		0DD1C1AC1D2D4746006FA7E5 /* Slice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slice.png; sourceTree = "<group>"; };
+		0DD1C1AE1D2D481E006FA7E5 /* immersion_mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = immersion_mode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				0DD1C1661D2D38AC006FA7E5 /* MSMoveView.h */,
 				0DD1C1671D2D38AC006FA7E5 /* MSMoveView.m */,
 				0DD1C14A1D2D387A006FA7E5 /* Main.storyboard */,
+				0DD1C1AE1D2D481E006FA7E5 /* immersion_mode.png */,
+				0DD1C1AC1D2D4746006FA7E5 /* Slice.png */,
 				0DD1C14D1D2D387A006FA7E5 /* Assets.xcassets */,
 				0DD1C14F1D2D387A006FA7E5 /* LaunchScreen.storyboard */,
 				0DD1C1521D2D387A006FA7E5 /* Info.plist */,
@@ -198,8 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD1C1511D2D387A006FA7E5 /* LaunchScreen.storyboard in Resources */,
+				0DD1C1AF1D2D481E006FA7E5 /* immersion_mode.png in Resources */,
 				0DD1C14E1D2D387A006FA7E5 /* Assets.xcassets in Resources */,
 				0DD1C14C1D2D387A006FA7E5 /* Main.storyboard in Resources */,
+				0DD1C1AD1D2D4746006FA7E5 /* Slice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +419,7 @@
 				0DD1C1621D2D387A006FA7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DD1C1631D2D387A006FA7E5 /* Build configuration list for PBXNativeTarget "MSBackgroundMoveTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				0DD1C1651D2D387A006FA7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

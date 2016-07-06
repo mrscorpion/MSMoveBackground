@@ -20,18 +20,17 @@ static const CGFloat AnimationDuration = 10.0f;
 @end
 
 @implementation MSMoveView
-- (void)setupDirection:(MoveDirectionType)direction image:(UIImage *)image
-{
+
+-(void)setupDirection:(MoveDirectionType)direction image:(UIImage *)image{
     [self setupDirection:direction image:image animationDuration:AnimationDuration];
 }
 
-- (void)setupDirection:(MoveDirectionType)direction image:(UIImage *)image animationDuration:(NSInteger)duration
-{
+-(void)setupDirection:(MoveDirectionType)direction image:(UIImage *)image animationDuration:(NSInteger)duration{
     if (image == nil) {
         return;
     }
-    self.direction = direction;
-    self.animationDuration = duration;
+    self.direction=direction;
+    self.animationDuration=duration;
     self.image=image;
     // 获取图片高度
     CGFloat height         = self.frame.size.height;
@@ -47,8 +46,7 @@ static const CGFloat AnimationDuration = 10.0f;
     [self addSubview:self.imageView];
 }
 
-- (void)startAnimation
-{
+- (void)startAnimation {
     if (self.direction != MoveDirectionLeft && self.direction != MoveDirectionRight) {
         self.direction = MoveDirectionRight;
     }
@@ -57,10 +55,11 @@ static const CGFloat AnimationDuration = 10.0f;
     } else {
         self.imageView.frame = self.endFrame;
     }
+    [self commitAnimation];
 }
 
-- (void)commitAnimation
-{
+- (void)commitAnimation {
+    
     if (self.direction == MoveDirectionRight) {
         [UIView animateWithDuration:self.animationDuration
                          animations:^{
@@ -73,7 +72,7 @@ static const CGFloat AnimationDuration = 10.0f;
                                                   [self commitAnimation];
                                               }];
                          }];
-    } else if (self.direction == MoveDirectionLeft) {
+    } else {
         [UIView animateWithDuration:self.animationDuration
                          animations:^{
                              self.imageView.frame = self.startFrame;
@@ -85,20 +84,7 @@ static const CGFloat AnimationDuration = 10.0f;
                                                   [self commitAnimation];
                                               }];
                          }];
-    } else {
-        [UIView animateWithDuration:0.1
-                         animations:^{
-                             self.imageView.frame = self.startFrame;
-                         } completion:^(BOOL finished) {
-                             [self.imageView removeFromSuperview];
-                             self.imageView = nil;
-                         }];
     }
 }
 
-- (void)stopAnimation
-{
-    self.direction = MoveDirectionNone;
-    [self commitAnimation];
-}
 @end

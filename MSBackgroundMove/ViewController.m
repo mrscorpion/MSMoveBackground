@@ -10,25 +10,19 @@
 #import "MSMoveView.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) MSMoveView *moveView;
 @end
 
 @implementation ViewController
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self.moveView stopAnimation];
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setup];
 }
 #pragma mark - setup
-- (void)setup{
+-(void)setup{
     // 背景移动的图
-    MSMoveView *moveView = [[MSMoveView alloc] initWithFrame:self.view.bounds];
-    self.moveView = moveView;
-    [moveView setupDirection:MoveDirectionRight image:[UIImage imageNamed:@"backGround"] animationDuration:15.0f];
+    MSMoveView *moveView         = [[MSMoveView alloc] initWithFrame:self.view.bounds];
+    [moveView setupDirection:MoveDirectionRight image:[UIImage imageNamed:@"Slice.png"] animationDuration:15.0f]; //@"backGround"
     [moveView startAnimation];
     [self.view addSubview:moveView];
 }
